@@ -4,7 +4,7 @@ SportyApp is built in React using Hooks (still in development).
 
 I created this app to demonstrate how I created Metis:
 
-Example : https://www.carolinevanaerschot.com/skills/0
+- https://www.carolinevanaerschot.com/skills/0
 
 # What is SportyApp ?
 
