@@ -2,7 +2,7 @@
 
 SportyApp is built in React using Hooks (still in development).
 
-I created this app to demonstrate how I created Metis:
+I make this app to demonstrate how I created Metis:
 
 - https://www.carolinevanaerschot.com/skills/0
 
