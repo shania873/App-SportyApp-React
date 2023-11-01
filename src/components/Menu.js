@@ -1,0 +1,60 @@
+import React, { useEffect } from "react";
+
+import Dropdown from "react-bootstrap/Dropdown";
+import Container from "react-bootstrap/Container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignOut, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+
+const Menu = () => {
+  return (
+    <>
+      <Navbar
+        collapseOnSelect
+        style={{ backgroundColor: "#4a4a4a" }}
+        expand="xl"
+        className="mb-3 menu-metis"
+        variant="dark"
+      >
+        <Container fluid>
+          <Navbar.Brand href="/">
+            <span className="text-uppercase text-white">SportyMap</span>
+          </Navbar.Brand>
+
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav.Link href="/statistiques">Liste de cours</Nav.Link>
+
+              {/* <Dropdown align={{ xxl: "end" }}>
+                <Dropdown.Toggle
+                  style={{
+                    backgroundColor: "transparent",
+                    border: "transparent",
+                  }}
+                >
+                  Mon profil
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item href="/edit-profile">
+                    Editer le profil
+                  </Dropdown.Item>
+                  <Dropdown.Item href="/edit-password">
+                    Editer le mot de passe
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    Déconnexion <FontAwesomeIcon icon={faSignOut} />{" "}
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown> */}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
+  );
+};
+
+export default Menu;
