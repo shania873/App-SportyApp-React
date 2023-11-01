@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# SportyApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SportyApp is built in React using Hooks (still in development).
 
-## Available Scripts
+I created this app to demonstrate how I created Metis:
 
-In the project directory, you can run:
+Example : https://www.carolinevanaerschot.com/skills/0
 
-### `npm start`
+# What is SportyApp ?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+SportyApp is an application where three personas can connect: the trainer, the client, and the superadmin.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The trainer can log in to SportyApp to publish the lessons they want to offer, including a photo, the address, and a description of the lessons. After that, the client can log in to the app to subscribe to the lessons.
 
-### `npm test`
+<!-- Demo : https://shania873.github.io/Movie-App/ -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+Before, you need to install this softwares:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- NodeJS: [https://nodejs.org/en](https://nodejs.org/en)
+- GitBash : [https://git-scm.com/downloads](https://git-scm.com/downloads) (recommanded for git)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For the installation, you git clone the project, prefer ssh clone for not to have any problems
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+https://github.com/shania873/App-SportyApp-React.git
+```
 
-### `npm run eject`
+When you got the project, and you insalled node JS, you type this command for install the packages
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+When you finished to install, you can run the project with this command (warn you, this project is in development not in production !)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+And you can go to the link [localhost:3000](http://localhost:3000/)
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+And while you develop or test my app, you can type this command for to be sure that nothing was broken :)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run test
+```
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
