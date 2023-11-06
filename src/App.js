@@ -14,9 +14,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
+        <Route path="unauthorized" element={<h1>Unauthorized</h1>} />
         <Route
           element={
-            <RequireAuth roles={["ROLE_USER", "ROLE_ADMIN", "ROLE_BASIC"]} />
+            <RequireAuth roles={["ROLE_ADMIN", "ROLE_BASIC", "ROLE_USER"]} />
           }
         >
           <Route path="/Login" element={<Login />} />
