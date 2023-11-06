@@ -9,6 +9,12 @@
 //     box-sizing: border-box!important;
 //     font-size: 14px!important;
 //   }
+.container-sent {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .switcher {
   display: flex;
   align-items: center;
@@ -26,7 +32,7 @@
   border: 0 !important;
   padding: 1rem !important;
   min-width: 3rem;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   font-size: 14px !important;
   -webkit-transition: all 0.3 ease !important;
   transition: all 0.3 ease !important;
@@ -40,12 +46,11 @@
 }
 
 .btn-metis-red {
-  background: #F04029 !important;
-
+  background: #f04029 !important;
 }
 
 .btn-metis-grey {
-  background: #F8F8F8 !important;
+  background: #f8f8f8 !important;
   color: #212529 !important;
 }
 
@@ -67,7 +72,7 @@
   }
 }
 
-.form-check-inline input[type="radio"]+label {
+.form-check-inline input[type="radio"] + label {
   display: inline;
 }
 
