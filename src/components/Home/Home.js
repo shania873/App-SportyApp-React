@@ -1,20 +1,23 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 import AddLessons from "./Form/Add-Lessons";
 
-const Home = (props) => {
+const Home = () => {
   return (
-    <>
-      <Container className="container-home d-flex mt-4">
-        <Col sm={6} className="text-align-left">
-          <h1>Bienvenue chez sportyApp !</h1>Rajoutez votre cours ici
-        </Col>
-        <Col sm={6}>
-          <AddLessons />
-        </Col>
+    <div className="main-home">
+      <Container className="container-home">
+        <Row className="justify-content-center align-items-center">
+          <Col sm={6} xs={12} className="text-align-left">
+            <h3>Bienvenue chez sportyApp !</h3>Rajoutez votre cours ici
+          </Col>
+          <Col sm={6} xs={12}>
+            <AddLessons />
+          </Col>
+        </Row>
       </Container>
-    </>
+    </div>
   );
 };
 

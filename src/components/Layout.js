@@ -8,9 +8,7 @@ const Layout = () => {
     <main className="App">
       {location.pathname !== "/Login" && <Menu />}
 
-      <div className="main-container">
-        <Outlet />
-      </div>
+      <Outlet />
     </main>
   );
 };

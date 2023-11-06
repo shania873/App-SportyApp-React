@@ -16,7 +16,7 @@ const AddLessons = () => {
     console.log(titleLesson, street, postalCode, city, description);
   }
   return (
-    <Form onSubmit={(e) => onSubmit(e)}>
+    <Form onSubmit={(e) => onSubmit(e)} className="form-addLessons">
       <Form.Group className="mb-3">
         <Form.Label>Titre du cours</Form.Label>
         <Form.Control

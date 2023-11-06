@@ -1,67 +1,35 @@
-.container-home {
-  position: relative;
+.main-home {
+  height: 100vh;
   width: 100%;
-  top: 0;
-  height: auto;
-  z-index: 1;
+  display: flex;
   align-items: center;
-  p {
-    margin: 0rem;
-  }
-
-  .input-duration {
-    width: 100%;
-    background-color: white;
-  }
-
-  label {
-    text-align: left;
-    float: left;
-    color: #545454;
-  }
-
-  .text-align-left {
-    text-align: left;
-  }
-
-  a {
-    display: block;
-    text-decoration: none;
-    margin-bottom: 1rem;
-    color: rgb(21, 21, 21);
-    font-size: 1.2rem;
-
-    svg {
-      margin-right: 1rem;
+  position: absolute;
+  top: 0;
+  .container-home {
+    p {
+      margin: 0rem;
     }
-  }
 
-  .formMeet-home {
     label {
-      color: white !important;
-      font-size: 0.8rem;
-    }
-  }
-
-  .set-repports {
-    background-color: #91bd10;
-    padding: 2rem;
-    // color: white;
-    border-radius: 8px;
-    margin-top: 2rem;
-
-    .send-btn {
-      cursor: pointer;
-      color: white;
+      text-align: left;
+      float: left;
+      color: #545454;
     }
 
-    h3 {
-      margin-bottom: 2rem;
+    .text-align-left {
+      text-align: left;
     }
 
-    form {
+    a {
+      display: block;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      color: rgb(21, 21, 21);
+      font-size: 1.2rem;
+
+      svg {
+        margin-right: 1rem;
+      }
     }
   }
 }
-
-// "#91bd10"
