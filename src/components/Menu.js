@@ -7,8 +7,15 @@ import { faSignOut, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import useLogout from "../hooks/useLogout";
 
 const Menu = () => {
+  const logout = useLogout();
+  const signOut = async () => {
+    await logout();
+    // navigate("/connect");
+  };
+
   return (
     <>
       <Navbar
@@ -28,7 +35,7 @@ const Menu = () => {
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link href="/statistiques">Liste de cours</Nav.Link>
 
-              {/* <Dropdown align={{ xxl: "end" }}>
+              <Dropdown align={{ xxl: "end" }}>
                 <Dropdown.Toggle
                   style={{
                     backgroundColor: "transparent",
@@ -38,17 +45,17 @@ const Menu = () => {
                   Mon profil
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item href="/edit-profile">
+                  {/* <Dropdown.Item href="/edit-profile">
                     Editer le profil
                   </Dropdown.Item>
                   <Dropdown.Item href="/edit-password">
                     Editer le mot de passe
-                  </Dropdown.Item>
-                  <Dropdown.Item>
+                  </Dropdown.Item> */}
+                  <Dropdown.Item onClick={(e) => signOut(e)}>
                     Déconnexion <FontAwesomeIcon icon={faSignOut} />{" "}
                   </Dropdown.Item>
                 </Dropdown.Menu>
-              </Dropdown> */}
+              </Dropdown>
             </Nav>
           </Navbar.Collapse>
         </Container>

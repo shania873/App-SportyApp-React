@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
 import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/esm/Row";
 
 const AddLessons = () => {
-  let [titleLesson, setTitleLesson] = React.useState("");
-  let [street, setStreet] = React.useState("");
-  let [postalCode, setPostalCode] = React.useState("");
-  let [city, setCity] = React.useState("");
-  let [description, setDescription] = React.useState("");
+  let [titleLesson, setTitleLesson] = useState("");
+  let [street, setStreet] = useState("");
+  let [postalCode, setPostalCode] = useState("");
+  let [city, setCity] = useState("");
+  let [description, setDescription] = useState("");
 
   function onSubmit(e) {
     e.preventDefault();
@@ -17,7 +17,7 @@ const AddLessons = () => {
   }
   return (
     <Form onSubmit={(e) => onSubmit(e)}>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+      <Form.Group className="mb-3">
         <Form.Label>Titre du cours</Form.Label>
         <Form.Control
           type="email"
@@ -26,7 +26,7 @@ const AddLessons = () => {
           required
         />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+      <Form.Group className="mb-3">
         <Form.Label>Adresse</Form.Label>
         <Form.Control
           type="text"
@@ -34,7 +34,7 @@ const AddLessons = () => {
           onChange={(e) => setStreet(e.target.value)}
         />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+      <Form.Group className="mb-3">
         <Form.Label>Code postal</Form.Label>
         <Form.Control
           type="number"
@@ -42,7 +42,7 @@ const AddLessons = () => {
           onChange={(e) => setPostalCode(e.target.value)}
         />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+      <Form.Group className="mb-3">
         <Form.Label>Ville</Form.Label>
         <Form.Control
           type="text"
@@ -51,7 +51,7 @@ const AddLessons = () => {
           onChange={(e) => setCity(e.target.value)}
         />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+      <Form.Group className="mb-3">
         <Form.Label>Description du cours</Form.Label>
         <Form.Control
           as="textarea"

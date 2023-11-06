@@ -1,10 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { useNavigate, Outlet, useLocation } from "react-router-dom";
 import axios from "axios";
-
+import AuthContext from "../context/AuthProvider";
 const useAuth = () => {
   const [auth, setAuth] = useState(null);
-
+  const navigate = useNavigate();
+  const context = useContext(AuthContext);
+  let location = useLocation();
   useEffect(() => {
+    console.log(location.pathname);
+    if (context.persist && location.pathname === "/") {
+      navigate("/Home");
+    }
+
+    if (context.persist === false && location.pathname === "/") {
+      navigate("/Login");
+    }
+    console.log("useAuth");
     const authenticateUser = async () => {
       try {
         const token = await axios.get(
@@ -30,7 +42,6 @@ const useAuth = () => {
           };
         });
       } catch (error) {
-        console.error("Erreur d'authentification :", error);
         setAuth(null);
       }
     };

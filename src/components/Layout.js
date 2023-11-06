@@ -1,10 +1,13 @@
-import React, { useContext, useDebugValue } from "react";
-import { Outlet } from "react-router-dom";
+import React from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Menu from "./Menu";
 const Layout = () => {
+  let location = useLocation();
+
   return (
     <main className="App">
-      <Menu />
+      {location.pathname !== "/Login" && <Menu />}
+
       <div className="main-container">
         <Outlet />
       </div>

@@ -1,6 +1,5 @@
 import React from "react";
-import { useRef, useState, useEffect } from "react";
-import useAuth from "../../hooks/useAuth";
+import { useRef, useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDumbbell } from "@fortawesome/free-solid-svg-icons";
@@ -10,14 +9,15 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-
-const LOGIN_URL = `${process.env.REACT_APP_API_URL}/login`;
+import AuthContext from "../../context/AuthProvider";
 
 const Login = () => {
   const navigate = useNavigate();
 
   const [email, setUser] = useState("");
   const [password, setPwd] = useState("");
+
+  let context = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,12 +31,8 @@ const Login = () => {
       credentials: "include",
     })
       .then((response) => {
-        console.log(response);
-        if (response.status === 200) {
-          // setAuth({ email, password });
-
-          navigate("/Home");
-        }
+        localStorage.setItem("isAuthenticated", true);
+        window.location.href = `${process.env.REACT_APP_URL_DEV}/Home`;
       })
       .catch((error) => {});
   };

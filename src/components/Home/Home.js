@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import Menu from "../Menu";
-import Map from "./Map/Map";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import AddLessons from "./Form/Add-Lessons";
 

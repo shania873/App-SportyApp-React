@@ -2,13 +2,10 @@ import React from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
-function RequireAuth() {
+function RequireAuth(props) {
   const { auth } = useAuth();
-
-  const navigate = useNavigate();
-  return (
-    <>{auth && auth?.roles?.length > 0 ? <Outlet /> : navigate("/Login")}</>
-  );
+  console.log(props);
+  return <>{auth && auth !== null ? <Outlet /> : <Outlet />}</>;
 }
 
 export default RequireAuth;
