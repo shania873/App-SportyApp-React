@@ -3,16 +3,48 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
 import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/esm/Row";
-
+import useAuth from "../../../hooks/useAuth";
 const AddLessons = () => {
+  const { auth } = useAuth();
   let [titleLesson, setTitleLesson] = useState("");
   let [street, setStreet] = useState("");
   let [postalCode, setPostalCode] = useState("");
   let [city, setCity] = useState("");
   let [description, setDescription] = useState("");
+  let [phoneNumber, setPhoneNumber] = useState("");
 
   function onSubmit(e) {
     e.preventDefault();
+    console.log(auth);
+    const data = {
+      firstName: auth.user.firstname,
+      lastName: auth.user.lastname,
+      phone: phoneNumber,
+      user: "/api/users/" + auth.user.id,
+      description: description,
+      places: [
+        {
+          name: titleLesson,
+          adress: street,
+          postalCode: postalCode,
+        },
+      ],
+    };
+
+    fetch(`${process.env.REACT_APP_API_URL}/contacts`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${auth.accessToken}`,
+      },
+      body: JSON.stringify(data),
+    }).then((response) => {
+      console.log(response);
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error("Network response was not ok.");
+    });
     console.log(titleLesson, street, postalCode, city, description);
   }
   return (
@@ -20,10 +52,18 @@ const AddLessons = () => {
       <Form.Group className="mb-3">
         <Form.Label>Titre du cours</Form.Label>
         <Form.Control
-          type="email"
+          type="text"
           placeholder="Tapez le type de cours"
           onChange={(e) => setTitleLesson(e.target.value)}
           required
+        />
+      </Form.Group>
+      <Form.Group className="mb-3">
+        <Form.Label>Numéro de téléphone</Form.Label>
+        <Form.Control
+          type="text"
+          placeholder="Tapez votre numéro de téléphone"
+          onChange={(e) => setPhoneNumber(e.target.value)}
         />
       </Form.Group>
       <Form.Group className="mb-3">

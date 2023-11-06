@@ -49,6 +49,7 @@ const useAuth = (currentRoles) => {
             roles: response.data.roleNames,
             accessToken: response.data.credentials,
             idUser: response.data.user.id,
+            user: response.data.user,
           };
         });
       } catch (error) {
