@@ -12,6 +12,8 @@ const AddLessons = () => {
   let [city, setCity] = useState("");
   let [description, setDescription] = useState("");
   let [phoneNumber, setPhoneNumber] = useState("");
+  let [date, setDate] = useState("");
+  let [hour, setHour] = useState("");
 
   let [isSubmit, setIsSubmit] = useState(false);
 
@@ -80,14 +82,14 @@ const AddLessons = () => {
                 required
               />
             </Form.Group>
-            <Form.Group className="mb-3">
+            {/* <Form.Group className="mb-3">
               <Form.Label>Numéro de téléphone</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Tapez votre numéro de téléphone"
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
-            </Form.Group>
+            </Form.Group> */}
             <Form.Group className="mb-3">
               <Form.Label>Adresse</Form.Label>
               <Form.Control
@@ -113,6 +115,30 @@ const AddLessons = () => {
                 onChange={(e) => setCity(e.target.value)}
               />
             </Form.Group>
+            <Form.Group className="mb-3">
+              <Row>
+                <Col>
+                  <Form.Label>Date du cours</Form.Label>
+                  <Form.Control
+                    type="date"
+                    placeholder="Tapez la date du cours"
+                    required
+                    onChange={(e) => setDate(e.target.value)}
+                  />
+                </Col>
+
+                <Col>
+                  <Form.Label>Heure du cours</Form.Label>
+                  <Form.Control
+                    type="time"
+                    placeholder="Tapez l'heure du cours"
+                    required
+                    onChange={(e) => setHour(e.target.value)}
+                  />
+                </Col>
+              </Row>
+            </Form.Group>
+
             <Form.Group className="mb-3">
               <Form.Label>Description du cours</Form.Label>
               <Form.Control

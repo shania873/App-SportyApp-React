@@ -48,8 +48,8 @@ const ListMyLessons = () => {
       {listLessons.map((lesson) => (
         <Row key={lesson.id} className="row-listMyLessons ">
           <Col className="d-flex align-items-left"> {lesson.description} </Col>
-          <Col>{lesson.phone}</Col>
-          <Col>{lesson.places[0].name}</Col>
+          {/* <Col>{lesson.phone}</Col>
+          <Col>{lesson.places[0].name}</Col> */}
         </Row>
       ))}
     </Container>
