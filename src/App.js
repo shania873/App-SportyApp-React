@@ -9,6 +9,7 @@ import Login from "./components/Login/Login";
 import RequireAuth from "./components/RequireAuth";
 import useAuth from "./hooks/useAuth";
 import AuthContext from "./context/AuthProvider";
+import ListMyLessons from "./components/MyLessons/List-MyLessons";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         >
           <Route path="/Login" element={<Login />} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/ListedeCours" element={<ListMyLessons />} />
         </Route>
       </Route>
     </Routes>

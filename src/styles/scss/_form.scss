@@ -105,3 +105,55 @@
     width: 1.25rem;
   }
 }
+
+input[type="password"] {
+  padding-right: 2rem;
+}
+
+input[type="password"].error {
+  border-color: red;
+}
+
+input[type="password"].error + .eye-icon {
+  color: red;
+}
+
+input[type="password"].error + .eye-icon:hover {
+  color: red;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+}
+
+input[type="text"].error + .eye-icon {
+  color: red;
+}
+
+input[type="text"].error + .eye-icon:hover {
+  color: red;
+}
+
+input[type="email"].error {
+  border-color: red;
+}
+
+input[type="email"].error + .eye-icon {
+  color: red;
+}
+
+input[type="email"].error + .eye-icon:hover {
+  color: red;
+}
+
+input[type="number"].error {
+  border-color: red;
+}
+
+input[type="number"].error + .eye-icon {
+  color: red;
+}
+
+input[type="number"].error + .eye-icon:hover {
+  color: red;
+}
