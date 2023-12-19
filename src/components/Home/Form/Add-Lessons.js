@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
 import Col from "react-bootstrap/esm/Col";
@@ -11,7 +11,7 @@ const AddLessons = () => {
   let [postalCode, setPostalCode] = useState("");
   let [city, setCity] = useState("");
   let [description, setDescription] = useState("");
-  let [phoneNumber, setPhoneNumber] = useState("");
+
   let [date, setDate] = useState("");
   let [hour, setHour] = useState("");
 
@@ -23,7 +23,9 @@ const AddLessons = () => {
     const data = {
       firstName: auth.user.firstname,
       lastName: auth.user.lastname,
-      phone: phoneNumber,
+      city: city,
+      date: date,
+      hour: hour,
       user: "/api/users/" + auth.user.id,
       description: description,
       places: [
@@ -49,7 +51,6 @@ const AddLessons = () => {
       }
       throw new Error("Network response was not ok.");
     });
-    console.log(titleLesson, street, postalCode, city, description);
   }
 
   function onClickReturnToForm(e) {
@@ -82,14 +83,7 @@ const AddLessons = () => {
                 required
               />
             </Form.Group>
-            {/* <Form.Group className="mb-3">
-              <Form.Label>Numéro de téléphone</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Tapez votre numéro de téléphone"
-                onChange={(e) => setPhoneNumber(e.target.value)}
-              />
-            </Form.Group> */}
+
             <Form.Group className="mb-3">
               <Form.Label>Adresse</Form.Label>
               <Form.Control

@@ -1,14 +1,14 @@
 .addSoins-form {
-      /* border: 1px solid #e5e5e5; */
-    /* padding: 2rem; */
-    /* background-color: #f8f8f8; */
-    margin-top: 0.9rem;
-  h5{
+  /* border: 1px solid #e5e5e5; */
+  /* padding: 2rem; */
+  /* background-color: #f8f8f8; */
+  margin-top: 0.9rem;
+  h5 {
     font-size: 1rem;
   }
-    label{
-      font-size: 0.9rem;
-    }
+  label {
+    font-size: 0.9rem;
+  }
 }
 
 .row-indicateurs,
@@ -56,17 +56,16 @@
     /* padding-top: 1rem; */
     /* border-top: 1px solid red; */
     padding-bottom: 1rem;
-    p{
+    p {
       margin: 0;
     }
   }
 
-
-  .title-indicateur{
+  .title-indicateur {
     padding: 0.5rem;
     background-color: #8cb30c;
     color: white;
-    font-weight: bold; 
+    font-weight: bold;
     /* border-radius: 8px; */
     font-size: 0.9rem;
     letter-spacing: 0.05rem;
@@ -82,7 +81,7 @@
 .row-btnRapport {
   display: flex;
   align-items: flex-end;
-  justify-content: end;
+  justify-content: flex-end;
   flex-direction: row-reverse;
   position: absolute;
   right: 0;

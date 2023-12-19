@@ -1,6 +1,5 @@
 import React from "react";
-import { useRef, useState, useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDumbbell } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,15 +8,10 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import AuthContext from "../../context/AuthProvider";
 
 const Login = () => {
-  const navigate = useNavigate();
-
   const [email, setUser] = useState("");
   const [password, setPwd] = useState("");
-
-  let context = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

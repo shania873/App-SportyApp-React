@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { useNavigate, Outlet, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import AuthContext from "../context/AuthProvider";
 const useAuth = (currentRoles) => {
@@ -58,7 +58,7 @@ const useAuth = (currentRoles) => {
     };
 
     authenticateUser();
-  }, []);
+  }, [context.persist, currentRoles, location.pathname, navigate]);
 
   return { auth, setAuth };
 };

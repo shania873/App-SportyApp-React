@@ -1,14 +1,13 @@
-import React, { useEffect, useContext } from "react";
+import React from "react";
 import "./App.css";
 import Home from "./components/Home/Home";
 
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./styles/app.scss";
 import Layout from "./components/Layout";
 import Login from "./components/Login/Login";
 import RequireAuth from "./components/RequireAuth";
-import useAuth from "./hooks/useAuth";
-import AuthContext from "./context/AuthProvider";
+
 import ListMyLessons from "./components/MyLessons/List-MyLessons";
 
 function App() {

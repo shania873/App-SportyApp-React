@@ -6,8 +6,8 @@ import Container from "react-bootstrap/Container";
 const ListMyLessons = () => {
   const [listLessons, setListLessons] = useState([]);
   const [listData, setListData] = useState([]);
-  const [length, setLength] = useState(listLessons ? listLessons.length : 0);
-  let data = [];
+  const length = listLessons ? listLessons.length : 0;
+
   useEffect(() => {
     fetch("https://localhost:8000/api/contacts")
       .then((response) => response.json())
