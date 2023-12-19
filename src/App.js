@@ -15,15 +15,21 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="unauthorized" element={<h1>Unauthorized</h1>} />
+        <Route
+          path="/SensNonCritique-App/unauthorized"
+          element={<h1>Unauthorized</h1>}
+        />
         <Route
           element={
             <RequireAuth roles={["ROLE_ADMIN", "ROLE_BASIC", "ROLE_USER"]} />
           }
         >
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/ListedeCours" element={<ListMyLessons />} />
+          <Route path="/SensNonCritique-App/Login" element={<Login />} />
+          <Route path="/SensNonCritique-App/Home" element={<Home />} />
+          <Route
+            path="/SensNonCritique-App/ListedeCours"
+            element={<ListMyLessons />}
+          />
         </Route>
       </Route>
     </Routes>
