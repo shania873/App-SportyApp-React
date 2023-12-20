@@ -20,10 +20,14 @@ function App() {
           <RequireAuth roles={["ROLE_ADMIN", "ROLE_BASIC", "ROLE_USER"]} />
         }
       >
-        <Route path="/App-SportyApp-React/Login" element={<Login />} exact />
-        <Route path="/App-SportyApp-React/Home" element={<Home />} exact />
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<Login />} exact />
         <Route
-          path="/App-SportyApp-React/ListedeCours"
+          path={`${process.env.PUBLIC_URL}/Home`}
+          element={<Home />}
+          exact
+        />
+        <Route
+          path={`${process.env.PUBLIC_URL}/ListeDeCours`}
           element={<ListMyLessons />}
         />
       </Route>
