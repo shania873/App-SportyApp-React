@@ -4,7 +4,7 @@ import Home from "./components/Home/Home";
 
 import { Routes, Route } from "react-router-dom";
 import "./styles/app.scss";
-import Layout from "./components/Layout";
+// import Layout from "./components/Layout";
 import Login from "./components/Login/Login";
 import RequireAuth from "./components/RequireAuth";
 
