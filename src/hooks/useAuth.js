@@ -9,6 +9,11 @@ const useAuth = (currentRoles) => {
   let location = useLocation();
 
   useEffect(() => {
+    console.log(
+      context,
+      location.pathname,
+      JSON.parse(localStorage.getItem("isAuthenticated"))
+    );
     if (context.persist && location.pathname === "/") {
       navigate("/Home");
     }

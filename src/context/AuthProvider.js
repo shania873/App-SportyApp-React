@@ -1,13 +1,14 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
+
 const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
+  const [persist, setPersist] = useState(
+    JSON.parse(localStorage.getItem("isAuthenticated")) || false
+  );
+
   return (
-    <AuthContext.Provider
-      value={{
-        persist: JSON.parse(localStorage.getItem("isAuthenticated")) || false,
-      }}
-    >
+    <AuthContext.Provider value={{ persist, setPersist }}>
       {children}
     </AuthContext.Provider>
   );
