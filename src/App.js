@@ -22,15 +22,8 @@ function App() {
       >
         <Route path={`${process.env.PUBLIC_URL}`} element={<Login />} exact />
         <Route path={`${process.env.PUBLIC_URL}/`} element={<Layout />}>
-          <Route
-            path={`${process.env.PUBLIC_URL}/Home`}
-            element={<Home />}
-            exact
-          />
-          <Route
-            path={`${process.env.PUBLIC_URL}/ListeDeCours`}
-            element={<ListMyLessons />}
-          />
+          <Route path={`/Home`} element={<Home />} exact />
+          <Route path={`/ListeDeCours`} element={<ListMyLessons />} />
         </Route>
       </Route>
     </Routes>
