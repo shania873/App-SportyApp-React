@@ -16,7 +16,7 @@ const useLogout = () => {
       });
     } catch (err) {
       localStorage.removeItem("isAuthenticated");
-      window.location.href = `${process.env.REACT_APP_URL_DEV}/`;
+      navigate("/");
     }
   };
 
