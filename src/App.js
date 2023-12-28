@@ -20,7 +20,7 @@ function App() {
           <RequireAuth roles={["ROLE_ADMIN", "ROLE_BASIC", "ROLE_USER"]} />
         }
       >
-        <Route path="/" element={<Login />} />
+        <Route path="/App-SportyApp-React" element={<Login />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/ListedeCours" element={<ListMyLessons />} />
       </Route>
