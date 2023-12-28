@@ -14,16 +14,13 @@ function App() {
   return (
     <Routes>
       {/* <Route path="/" element={<Layout />}> */}
-      <Route
-        path="/App-SportyApp-React/unauthorized"
-        element={<h1>Unauthorized</h1>}
-      />
+      <Route path="/Unauthorized" element={<h1>Unauthorized</h1>} />
       <Route
         element={
           <RequireAuth roles={["ROLE_ADMIN", "ROLE_BASIC", "ROLE_USER"]} />
         }
       >
-        <Route path="/App-SportyApp-React" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/ListedeCours" element={<ListMyLessons />} />
       </Route>
