@@ -13,16 +13,16 @@ import ListMyLessons from "./components/MyLessons/List-MyLessons";
 function App() {
   return (
     <Routes>
-      {/* <Route element={<Layout />}> */}
+      {/* <Route path="/" element={<Layout />}> */}
       <Route path="unauthorized" element={<h1>Unauthorized</h1>} />
       <Route
         element={
           <RequireAuth roles={["ROLE_ADMIN", "ROLE_BASIC", "ROLE_USER"]} />
         }
       >
-        <Route path={`/`} element={<Login />} exact />
-        <Route path={`/Home`} element={<Home />} exact />
-        <Route path={`/ListeDeCours`} element={<ListMyLessons />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/ListedeCours" element={<ListMyLessons />} />
       </Route>
       {/* </Route> */}
     </Routes>
