@@ -13,7 +13,6 @@ import ListMyLessons from "./components/MyLessons/List-MyLessons";
 function App() {
   return (
     <Routes>
-      {/* <Route path="/" element={<Layout />}> */}
       <Route path="/Unauthorized" element={<h1>Unauthorized</h1>} />
       <Route
         element={
@@ -21,8 +20,10 @@ function App() {
         }
       >
         <Route path="/" element={<Login />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/ListedeCours" element={<ListMyLessons />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="/Home" element={<Home />} />
+          <Route path="/ListedeCours" element={<ListMyLessons />} />
+        </Route>
       </Route>
       {/* </Route> */}
     </Routes>
