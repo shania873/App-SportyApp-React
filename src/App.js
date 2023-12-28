@@ -20,7 +20,7 @@ function App() {
           <RequireAuth roles={["ROLE_ADMIN", "ROLE_BASIC", "ROLE_USER"]} />
         }
       >
-        <Route path={`/Login`} element={<Login />} exact />
+        <Route path={`/`} element={<Login />} exact />
         <Route path={`/Home`} element={<Home />} exact />
         <Route path={`/ListeDeCours`} element={<ListMyLessons />} />
       </Route>
