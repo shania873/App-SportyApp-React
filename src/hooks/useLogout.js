@@ -9,13 +9,14 @@ const useLogout = () => {
         withCredentials: true,
       }).then((response) => {
         console.log(response);
-        if (response.status === 200) {
-          localStorage.removeItem("isAuthenticated");
-          window.location.href = `${process.env.REACT_APP_URL_DEV}/Login`;
-        }
+        // if (response.status === 200) {
+        // localStorage.removeItem("isAuthenticated");
+        // window.location.href = `${process.env.REACT_APP_URL_DEV}/`;
+        // }
       });
     } catch (err) {
-      console.error(err);
+      localStorage.removeItem("isAuthenticated");
+      window.location.href = `${process.env.REACT_APP_URL_DEV}/`;
     }
   };
 

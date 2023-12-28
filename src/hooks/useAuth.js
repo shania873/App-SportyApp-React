@@ -14,7 +14,7 @@ const useAuth = (currentRoles) => {
     }
 
     if (context.persist === false && location.pathname === "/") {
-      navigate("/Login");
+      navigate("/");
     }
 
     const authenticateUser = async () => {
