@@ -13,18 +13,18 @@ import ListMyLessons from "./components/MyLessons/List-MyLessons";
 function App() {
   return (
     <Routes>
-      <Route path={`/`} element={<Layout />}>
-        <Route path="unauthorized" element={<h1>Unauthorized</h1>} />
-        <Route
-          element={
-            <RequireAuth roles={["ROLE_ADMIN", "ROLE_BASIC", "ROLE_USER"]} />
-          }
-        >
-          <Route path={`/Login`} element={<Login />} exact />
-          <Route path={`/Home`} element={<Home />} exact />
-          <Route path={`/ListeDeCours`} element={<ListMyLessons />} />
-        </Route>
+      {/* <Route element={<Layout />}> */}
+      <Route path="unauthorized" element={<h1>Unauthorized</h1>} />
+      <Route
+        element={
+          <RequireAuth roles={["ROLE_ADMIN", "ROLE_BASIC", "ROLE_USER"]} />
+        }
+      >
+        <Route path={`/Login`} element={<Login />} exact />
+        <Route path={`/Home`} element={<Home />} exact />
+        <Route path={`/ListeDeCours`} element={<ListMyLessons />} />
       </Route>
+      {/* </Route> */}
     </Routes>
   );
 }
