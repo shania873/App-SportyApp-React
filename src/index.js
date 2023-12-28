@@ -5,6 +5,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./context/AuthProvider";
 
+console.log(process.env.PUBLIC_URL);
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <AuthProvider>
