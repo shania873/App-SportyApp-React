@@ -31,9 +31,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14" # Use the desired Node.js version
+          node-version: "20.5.1" # Use the desired Node.js version
       - name: Install dependencies
-        run: npm install
+        run: npm install --force
       - name: Build with Jekyll
         run: npm run build # Add your npm build command here
       - name: Setup Pages
