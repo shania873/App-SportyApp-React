@@ -7,10 +7,10 @@ import { AuthProvider } from "./context/AuthProvider";
 
 console.log(process.env.PUBLIC_URL);
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <AuthProvider>
+  <AuthProvider>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <App />
-    </AuthProvider>
-  </BrowserRouter>,
+    </BrowserRouter>
+  </AuthProvider>,
   document.getElementById("root")
 );
