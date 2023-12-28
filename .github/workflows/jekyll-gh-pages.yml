@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "20.1.5" # Utilisez la version de Node.js que vous préférez ou nécessitez
+          node-version: "20.5.1" # Utilisez la version de Node.js que vous préférez ou nécessitez
       - name: Install dependencies
         run: npm install --force # Utilisez npm ci pour installer les dépendances de manière cohérente
       - name: Build with Jekyll
