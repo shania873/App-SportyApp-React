@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "https://shania873.github.io/App-SportyApp-React/static/css/main.06d5c293.css",
-    "main.js": "https://shania873.github.io/App-SportyApp-React/static/js/main.2e6fbf7e.js",
+    "main.js": "https://shania873.github.io/App-SportyApp-React/static/js/main.ec6fc976.js",
     "index.html": "https://shania873.github.io/App-SportyApp-React/index.html",
     "main.06d5c293.css.map": "https://shania873.github.io/App-SportyApp-React/static/css/main.06d5c293.css.map",
-    "main.2e6fbf7e.js.map": "https://shania873.github.io/App-SportyApp-React/static/js/main.2e6fbf7e.js.map"
+    "main.ec6fc976.js.map": "https://shania873.github.io/App-SportyApp-React/static/js/main.ec6fc976.js.map"
   },
   "entrypoints": [
     "static/css/main.06d5c293.css",
-    "static/js/main.2e6fbf7e.js"
+    "static/js/main.ec6fc976.js"
   ]
 }
