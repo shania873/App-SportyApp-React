@@ -1,5 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDumbbell } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,7 +13,7 @@ import Button from "react-bootstrap/Button";
 const Login = () => {
   const [email, setUser] = useState("");
   const [password, setPwd] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
 

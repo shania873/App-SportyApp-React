@@ -1,6 +1,10 @@
 import axios from "axios";
+
 import useAuth from "./useAuth";
+import { useNavigate } from "react-router-dom";
+
 const useLogout = () => {
+  const navigate = useNavigate();
   const { setAuth } = useAuth();
   const logout = async () => {
     setAuth({});
